@@ -19,8 +19,7 @@ For your convenience, a binary of the Einstein REX is available under the {{{_Da
 
 = Building on Unix (including MacOS X) and Cygwin, as a native build, using Jam =
 
-  # Install Jam 2.5. Not btjam, not ftjam, regular jam. You can get it from MacPorts on MacOS X. On Ubuntu, the debian package jam is fine. You can also compile it from source:
-http://public.perforce.com/public/jam/index.html
+  # Install Jam 2.5. Not btjam, not ftjam, regular jam. You can get it from MacPorts on MacOS X. On Ubuntu, the debian package jam is fine. You can also compile it from source: http://public.perforce.com/public/jam/index.html
   # Get K (preferably from CVS) at http://sourceforge.net/projects/KLibs/
   # Compile K with Jam with {{{cd <path_to_K>/_Build_/Jam/ && jam}}}
   # Get libffi. On MacOS X, I suggest getting with MacPorts.
@@ -41,11 +40,10 @@ The general method is the following:
   # Compile Einstein with Jam with cd <path_to_einstein>/_Build_/Jam/ && jam -sK=<path_to_K> -starget=<cross_target>
 
 == How I built cross-binaries ==
-  * OpenZaurus 3.4.5: with crosstool compilers (built with gcc3 on the Mac, which is not an option on MacIntel).
+  * OpenZaurus 3.4.5: with crosstool compilers, cf OpenZaurusBuildInstructions.
   * Nokia 770 OS 2005: with crosstool compilers (built with gcc3 on the Mac).
   * Debian x86: with crosstool compilers.
   * Nokia 770/880 OS 2006: Under VMWare Fusion with the image for maemo development. I installed libffi with apt-get.
-
 
 
 
