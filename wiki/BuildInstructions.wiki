@@ -43,7 +43,7 @@ The general method is the following:
   * OpenZaurus 3.4.5: with crosstool compilers, cf OpenZaurusBuildInstructions.
   * Nokia 770 OS 2005: with crosstool compilers (built with gcc3 on the Mac).
   * Debian x86: with crosstool compilers.
-  * Nokia 770/880 OS 2006: Under VMWare Fusion with the image for maemo development. I installed libffi with apt-get.
+  * Nokia 770/800 OS 2006: with Code Sourcery compilers ported with MacPorts, cf NokiaBuildInstructions.
 
 
 
