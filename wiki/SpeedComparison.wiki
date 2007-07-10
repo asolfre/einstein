@@ -1,0 +1,20 @@
+#summary Post NewtTest speed results here.
+= Introduction =
+
+This is a page to collect speed test results.  Please post in this format:
+
+|| OS Platform || CPU Type / Speed || System RAM || Einstein command line || Loop iter. (avg /10) || Your Name || Notes and Einstein version (date) ||
+
+Remarks:
+  * The ticks test always gives 65 on Einstein and 60 on regular Newtons (and more on accelerated Newtons). This is because the timer emulation is different on Einstein, as emulating the exact tick beats is expensive.
+  * The loop iteration test is a test of the NewtonScript speed, which is not extremely accurate because the AppWorld (where the NewtonScript interpreters runs) is only one of the threads running on NewtonOS. It is not an accurate measure of the CPU speed, but it's a good way to measure the progress on the Einstein emulator.
+
+
+= Results =
+
+|| *OS Platform* || *CPU Type / Speed* || *System RAM* || *Einstein command line* || *Loop iter. (avg /10)* || *Your Name* || *Notes* ||
+|| Fedora Core 5 || Pentium 4 HT 3.0GHz || 1.25GB || einstein || 5221 || Victor Rehorst || 20070710 version ||
+|| Pepper Linux (Fedora Core 4) || AMD Geode LX 500MHz || 1GB || einstein --width=600 --height=400 || 756 || Victor Rehorst || 20070710 version, Generic JIT ||
+
+
+
