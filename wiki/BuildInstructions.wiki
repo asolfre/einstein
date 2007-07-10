@@ -26,7 +26,7 @@ For your convenience, a binary of the Einstein REX is available under the {{{_Da
   # Compile Einstein with Jam with {{{cd <path_to_einstein>/_Build_/Jam/ && jam -sK=<path_to_K>}}} or {{{cd <path_to_einstein>/_Build_/Jam/ && jam -sK=<path_to_K> -sC++FLAGS=-I/path/to/libffi/include -sCCFLAGS=-I/path/to/libffi/include -sLINKFLAGS=-I/path/to/libffi/include}}} if libffi isn't installed in a standard path that the compiler will find.  For example:
 
 {{{
-jam -sjittarget=generic -sK=/root/K/K/ -sC++FLAGS="-I/root/K/K/ -I/root/einstein/Einstein/libffi-linux/include/" -SCCFLAGS="-I/root/K/K/ -I/root/einstein/Einstein/libffi-linux/include/"
+jam -sjittarget=generic -sC++FLAGS="-I/usr/local/include -I/root/einstein/Einstein/libffi-linux/include/ -L/root/einstein/Einstein/libffi-linux/lib" -sCCFLAGS="-I/usr/local/include -I/root/einstein/Einstein/libffi-linux/include/ -L/root/einstein/Einstein/libffi-linux/lib"  -sK=/root/K/
 }}}
 
 == Notes ==
@@ -48,6 +48,5 @@ The general method is the following:
   * Nokia 770 OS 2005: with crosstool compilers (built with gcc3 on the Mac).
   * Debian x86: with crosstool compilers.
   * Nokia 770/800 OS 2006: with Code Sourcery compilers ported with MacPorts, cf NokiaBuildInstructions.
-
 
 
