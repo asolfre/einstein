@@ -37,7 +37,7 @@ screen -S crosstool bash -i
 }}}
   # Run the above script.
 
-= Compiling for OpenZaurus =
+= Building compilers for the OpenZaurus =
 
 Linux kernel earlier than 2.6.11.3 does not compile with gcc 4, while Intel Macs only come with gcc4. For that reason, we need to compile with linux headers 2.6.11.3, with gcc3 or patch the linux headers. I suggest compiling with linux headers 2.6.11.3 as follows:
   # Create a zaurus.dat file based on gcc-3.4.1-glibc-2.3.3.dat:
@@ -73,3 +73,9 @@ echo Done.
 }}}
   # Run the above script (inside the crosstool environment).
 
+= Building Einstein =
+
+  * Using these cross compilers and Jam, build K and Einstein for OpenZaurus with
+{{{
+jam -starget=arm-linux
+}}}
