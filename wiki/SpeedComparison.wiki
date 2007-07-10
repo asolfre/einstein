@@ -13,8 +13,7 @@ Remarks:
 = Results =
 
 || *OS Platform* || *CPU Type / Speed* || *System RAM* || *Einstein command line* || *Loop iter. (avg /10)* || *Your Name* || *Notes* ||
-|| Fedora Core 5 || Pentium 4 HT 3.0GHz || 1.25GB || einstein || 5221 || Victor Rehorst || 20070710 version ||
+|| Fedora Core 5 || Pentium 4 HT 3.0GHz || 1.25GB || einstein || 5221 || Victor Rehorst || 20070710 version, Generic JIT ||
 || Pepper Linux (Fedora Core 4) || AMD Geode LX 500MHz || 1GB || einstein --width=600 --height=400 || 756 || Victor Rehorst || 20070710 version, Generic JIT ||
-
 
 
