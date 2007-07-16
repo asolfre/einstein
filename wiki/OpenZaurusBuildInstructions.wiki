@@ -77,6 +77,8 @@ echo Done.
 
   * Using these cross compilers and Jam, build K and Einstein for OpenZaurus with
 {{{
-jam -starget=arm-linux
+jam -starget=arm-linux -sjittarget=GENERIC
 }}}
   * Cf the BuildInstructions.
+
+The default JIT Target (ARMLE) doesn't work yet. This is why you need to specify the jittarget on the command line.
