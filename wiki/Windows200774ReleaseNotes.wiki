@@ -1,4 +1,5 @@
 #summary Release notes for the MS-Windows release 2007.7.3
+#labels Featured
 
 _see also:_ Windows200773ReleaseNotes
 
