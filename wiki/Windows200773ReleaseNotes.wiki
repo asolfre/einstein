@@ -1,5 +1,5 @@
-#labels Featured
-#Release notes for the MS-Windows release 2007.7.3
+Release notes for the MS-Windows release 2007.7.3
+_see also:_ Windows200774ReleaseNotes
 
 = New Features =
 
