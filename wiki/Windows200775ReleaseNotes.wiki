@@ -1,0 +1,13 @@
+#summary Release notes for the MS-Windows release 2007.7.4
+#labels Featured
+
+_see also:_ Windows200774ReleaseNotes
+
+= New Features =
+
+  * added performance tools (SVN only)
+  * added first careful steps of "Albert OS", a rewrite of emulated functions with native "C" and "C++" (see SVN for details)
+
+= Bug Fixes =
+
+  * adjusted real time clock
