@@ -4,7 +4,7 @@ _see also:_
 
 = New Features =
 
-  * <none>
+  * (none)
 
 = Bug Fixes =
 
