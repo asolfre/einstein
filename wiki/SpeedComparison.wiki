@@ -18,3 +18,4 @@ Remarks:
 || MacOS X 10.4.10 (Intel) || iMac 1.83 GHz Intel Core Duo || 512 MB || Einstein.app || 6698 || Paul Guyot || 2007.7 release, Generic JIT ||
 || Fedora Core 7 || Celeron M 360 (1.4GHz) || 480 MB || einstein || 3119 || Victor Rehorst || 20070710 version, Generic JIT ||
 || WindowsXP || Pentium 4 HT (3.0GHz)  || 1GB || einstein || 5188 || Matthias Melcher || 2007.7.4, Generic JIT ||
+|| OS X Snow Leopard || 2.33GHz Core 2 Duo  || 3GB || einstein || 9210 || Matthias Melcher || 2010.1, Generic JIT ||
