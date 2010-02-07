@@ -34,7 +34,7 @@ The MMU needs over 50% of the emulation time. The goal is to simplify and finall
 
 Einstein uses a JIT compiler to convert every ARM instruction into a table lookup which then emulates the given instruction. The goal is to replace often used code segments in NewtonOS with native "C" code.
 
-(add a ink to a page that explains how we can mix native and JIT ode, and how we can safely continue emulation, even when the MMU causes and exception)
+(add a ink to a page that explains how we can mix native and JIT code, and how we can safely continue emulation, even when the MMU causes and exception)
 
  * 2.1: use the symbol table and the ROM to create a complete C++ source tree
  * 2.2: use analysis tools and hit counting to find the functions that are called most often
