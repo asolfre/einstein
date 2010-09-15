@@ -56,7 +56,7 @@ The goal is to create as much native code as possible by auto-generating C++ cod
 The goal is to create drivers for many platforms and operating systems.
 
  * 4.1: with NewtonOS running natively at full speed, create a standardized driver interface
- * 4.2: write screen/touch//sound/etc. drivers for all target platforms
+ * 4.2: write screen, touch, sound, etc. drivers for all target platforms
  * 4.3: enjoy!
 
 As a result, NewtonOS will run on any platform with over 200 MB of RAM, a pointing device, and a graphics screen. In terms of 2010: on pretty much anything - including the iPad.
