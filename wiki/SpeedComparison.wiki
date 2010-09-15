@@ -22,5 +22,5 @@ Remarks:
 || WindowsXP || Pentium 4 HT (3.0GHz)  || 1GB || einstein || 5188 || Matthias Melcher || 2007.7.4, Generic JIT ||
 || Mac OS X 10.5.8 || Intel Core 2 Duo 3.33 GHz || 2GB || Einstein.app || 3989 || Vladislav Korotnev ||
 || Fedora Core 7 || Celeron M 360 (1.4GHz) || 480 MB || einstein || 3119 || Victor Rehorst || 20070710 version, Generic JIT ||
-|| iPhone 3GS || iOS 4.1 || 256 MB || iEinstein || 1200 || Matthias Melcher || Sep 15th 2010 SVN ||
+|| iPhone 3GS || A4 (ARM6) 1GHz || 256 MB || iEinstein || 1200 || Matthias Melcher || Sep 15th 2010 SVN ||
 || Pepper Linux (Fedora Core 4) || AMD Geode LX 500MHz || 1GB || einstein --width=600 --height=400 || 756 || Victor Rehorst || 20070710 version, Generic JIT ||
