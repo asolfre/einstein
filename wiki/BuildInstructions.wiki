@@ -2,7 +2,7 @@
 
 = General remarks =
 
-Einstein relies on K which is available on [http://sourceforge.net/projects/KLibs/ sourceforge]. It is built using Xcode or [http://www.perforce.com/jam/jam.html Perforce Jam].
+Einstein relies on K which is part of the SVN repository. It is built using Xcode or [http://www.perforce.com/jam/jam.html Perforce Jam].
 
 For now, Einstein ROM Extension can only be built using Apple Newton C++ Tools and Apple Newton ToolKit, available on [http://www.unna.org/ UNNA] as part of the [http://www.unna.org/view.php?/development/NewtonDev NewtonDev environment] and running in MacOS 9 (I actually use Classic and [http://www.kallisys.com/mac/toolserver(1)/ toolserver(1)]).
 
@@ -11,17 +11,25 @@ For your convenience, a binary of the Einstein REX is available under the {{{_Da
 = Building on MacOS X, for MacOS X, using Xcode =
 
   # Get latest Xcode from Apple Connection website and install it with 10.3.9 and 10.4u cross-SDKs (this is the default).
-  # Get K (preferably from CVS) at http://sourceforge.net/projects/KLibs/
-  # Tell Xcode where to find K by defining a K source tree (in the preferences). On my system, K is set to /Users/paul/Bibliotheques/K/ and I did a cvs co inside /Users/paul/Bibliotheques/
   # Open the Einstein Xcode project.
   # Choose your target (I suggest Einstein.app)
+  # K is part of the SVN repository and will build automatically
+  # Click build.
+
+= Building on MacOS X, for iOS (iPhone, etc) =
+
+  # Get latest Xcode from Apple Connection website and install it with the iOS 4 SDK
+  # Open the Einstein Xcode project.
+  # Choose iEinstein as a target for either the emulator or for the real device
+  # iEinstein expects a binary ROM image (8MB exactly) version 717006 in the _Data_ directory at compile time
+  # K is part of the SVN repository and will build automatically
   # Click build.
 
 = Building on Unix (including MacOS X) and Cygwin, as a native build, using Jam =
 
   # Install Jam 2.5. Not btjam, not ftjam, regular jam. You can get it from MacPorts on MacOS X. On Ubuntu, the debian package jam is fine. You can also compile it from source: ftp://ftp.perforce.com/pub/jam/jam-2.5.zip
   # Make sure you have {{libstdc++-devel}} installed as well.
-  # Get K (preferably from CVS) at http://sourceforge.net/projects/KLibs/
+  # K is part of the repository. You may have to update Makefiles. Unfortunately it vanished from SourceForge
   # Compile K with Jam with {{{cd <path_to_K>/_Build_/Jam/ && jam}}}
   # Get libffi. On MacOS X, I suggest getting with MacPorts.  There seem to be pre-built copies for various platforms in the Einstein project in svn too.
   # Compile Einstein with Jam with {{{cd <path_to_einstein>/_Build_/Jam/ && jam -sK=<path_to_K>}}} or {{{cd <path_to_einstein>/_Build_/Jam/ && jam -sK=<path_to_K> -sC++FLAGS=-I/path/to/libffi/include -sCCFLAGS=-I/path/to/libffi/include -sLINKFLAGS=-I/path/to/libffi/include}}} if libffi isn't installed in a standard path that the compiler will find.  For example:
