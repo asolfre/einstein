@@ -2,22 +2,22 @@
 
 (...work in progress...)
 
-= ROM Image =
+== ROM Image ==
 
 In order to run, Einstein requires a ROM dump from a real Newton.  We cannot provide you this ROM file.
 
-= Einstein.rex =
+== Einstein.rex ==
 
 Einstein.rex is a Newton ROM extension, built with the Newton developer tools in much the same way as you would build a ROM patch for an actual Newton.  It provides glue code to re-route hardware dependencies to the virtual emulator hardware.  Einstein loads the REx and applies it to the vanilla ROM when the emulator first starts up.
 
-= Flash File =
+== Flash File ==
 
-= TEmulator = 
+== TEmulator == 
 
-= Platform Manager =
+== Platform Manager ==
 
-= Network Manager =
+== Network Manager ==
 
-= Sound Manager =
+== Sound Manager ==
 
-= Screen Manager =
+== Screen Manager ==
