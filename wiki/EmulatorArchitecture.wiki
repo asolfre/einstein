@@ -16,7 +16,9 @@ The flash file simulates the on-board flash memory of an actual Newton.  It is c
 
 On Mac OS X, the flash file is created in ~/Library/Application Support/Einstein Platform
 
-== TEmulator == 
+== TEmulator ==
+
+TEmulator is the primary class that runs the emulation.  TEmulator encapsulates all of the other hardware abstractions in Einstein, including display hardware, sound hardware, CPU, memory, serial ports, etc.  Once properly created and initialized, TEmulator's Run() method is dispatched on its own thread and drives the main loop of the emulator.
 
 == Platform Manager ==
 
