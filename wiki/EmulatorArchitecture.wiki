@@ -8,9 +8,13 @@ In order to run, Einstein requires a ROM dump from a real Newton.  We cannot pro
 
 == Einstein.rex ==
 
-Einstein.rex is a Newton ROM extension, built with the Newton developer tools in much the same way as you would build a ROM patch for an actual Newton.  It provides glue code to re-route hardware dependencies to the virtual emulator hardware.  Einstein loads the REx and applies it to the vanilla ROM when the emulator first starts up.
+Einstein.rex is a Newton ROM extension, built with the Newton developer tools in much the same way as you would build a ROM patch for an actual Newton.  It provides glue code to re-route hardware dependencies to the virtual emulator hardware.  Einstein loads the REx file from disk and applies it to the vanilla ROM when the emulator first starts up.
 
 == Flash File ==
+
+The flash file simulates the on-board flash memory of an actual Newton.  It is created and initialized the first time the emulator is run.  The file is eight megabytes in size, consisting of two "banks" of four megabytes each.  The TFlash class provides the interface to the flash memory.  The TFlash object is "owned" by TMemory, which is in turn owned by TEmulator.
+
+On Mac OS X, the flash file is created in ~/Library/Application Support/Einstein Platform
 
 == TEmulator == 
 
