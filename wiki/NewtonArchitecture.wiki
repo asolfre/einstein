@@ -1,0 +1,38 @@
+#summary An overview of the Mssage Pad and Newton OS architecture.
+
+= Introduction =
+
+This page will explain a little bit about the Newton OS internals and why it cooperates so greatly with the Message Pad hardware.
+
+== History ==
+
+When the software engineers at Apple wrote Newton OS, they knew little about the hardware they were developing for. Worse yet, the hardware department changed the CPU and many other essential aspects of the hardware in mid-stream. Luckily, those software engineers were prepared and wrote Newton OS  in C++ which can be translated for any CPU, based around a bunch of drivers that can adapt to many hardware configurations.
+
+== Components ==
+
+Apple cooperated with Cirrus to integrate almost all of the logic and peripherals into a couple of chips around a CPU, some RAM, ROM, and flash. These chips also provide timers, interrupts, DMA channels, and much more.
+
+== Newton OS Basics ==
+
+The OS is primarily written in C++ (about 30% of the ROM) with a hand full of hand-coded ARM assembler functions for access to CPU resources (MMU, DMA, and many more three letter acronyms - about 2%). The C++ code forms the basic OS including a byte code interpreter and compiler for Newton Script, a great language based on Self.
+
+=== Newton Script ===
+
+The next 30% of the ROM hold the Newton Script language definition and basic NS resources, such as the on screen keyboard, some graphics, the icon bar, and more. 
+
+=== Graphics ===
+
+Probably another 20% are used for more graphics, fonts, and dictionaries.
+
+=== REx ===
+
+The remaining ROM is used for a REx, a ROM Extension. This is where a lot of the magic lies! A REx can contain programs (for example most of the stuff you find in the Extras Drawer), but it can also contain drivers for all kinds of peripherals. 
+
+Apple was planning to (and did) license the ROM out to other vendors. If those vendors wanted to build their own hardware, they could simply add another ROM containing a REx with driver for, say, a TFT display in a higher resolution. Newton OS was prepared from the beginning!
+
+== Einstein and the REx ==
+
+By writing a REx with simple function stubs, it was possible to write a virtual machine interface without understanding or reverse engineering any of the peripherals. Well, at least in theory. It was still necessary to understand DMA access, interrupts, timers, etc. etc. . STill, writing a driver for the host audio system for example requires no knowledge at any of the audio hardware in the Message Pad.
+
+More details on this can be found in EinsteinArchitecture.
+
