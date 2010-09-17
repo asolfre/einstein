@@ -2,6 +2,10 @@
 
 (...work in progress...)
 
+== Primer ==
+
+Here is an collection of information explaining why the Newton OS is such a great operating system, and why emulation and simulation could be solved so elegantly in Einstein: NewtonArchitecture
+
 == ROM Image ==
 
 In order to run, Einstein requires a ROM dump from a real Newton.  We cannot provide you this ROM file, but you can generate one from your own hardware if you own a Newton.  The ROM file is expected to be exactly 8 megabytes in size.  Most development is being done with the version 717006 ROM.
