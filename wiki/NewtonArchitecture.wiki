@@ -34,5 +34,4 @@ Apple was planning to (and did) license the ROM out to other vendors. If those v
 
 By writing a REx with simple function stubs, it was possible to write a virtual machine interface without understanding or reverse engineering any of the peripherals. Well, at least in theory. It was still necessary to understand DMA access, interrupts, timers, etc. etc. . STill, writing a driver for the host audio system for example requires no knowledge at any of the audio hardware in the Message Pad.
 
-More details on this can be found in EinsteinArchitecture.
-
+More details on this can be found in EmulatorArchitecture.
