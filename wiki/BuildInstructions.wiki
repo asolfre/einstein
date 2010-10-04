@@ -16,7 +16,7 @@ For your convenience, a binary of the Einstein REX is available under the {{{_Da
   # K is part of the SVN repository and will build automatically
   # Click build.
 
-= Building on MacOS X, for iOS (iPhone, etc), using Xcode =
+= Building on MacOS X, for iOS 3.2 and up (iPhone, etc), using Xcode =
 
   # Get Xcode 3.2.4 from the Apple Developers website and install it with the iOS 4 SDK
   # Open the Einstein Xcode project.
