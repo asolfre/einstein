@@ -1,4 +1,5 @@
 #summary Installing a Newton ROM on an iOS device
+#labels Featured
 
 = Introduction =
 
@@ -23,6 +24,14 @@ Rename the ROM to _717006.rom_ and upload it to your iOS device using _iTunes_.
   * synchronize your device and relaunch iEinstein
 
 iEinstein also accepts the Lantern DDK image files. They must be named "717006.aif" and "717006.rex".
+
+= The First Launch =
+
+When you launch iEinstein with ROM installed for the first time, it will need to set up the entire Newton system. It will take up to a minute until the Newton logo shows and another minute until you are finally asked to input some personal information.
+
+Don't bother setting the date: NewtonOS has a bug and can not support dates after January 2010. There is a patch available which may or may not work with the emulator.
+
+Eventually, the Notes application will show with an icon bar at the bottom of the screen. Go ahead, fool around, Write text, open the drawer, test the other apps. Have fun!
 
 = Installing Packages =
 
