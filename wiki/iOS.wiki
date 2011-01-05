@@ -1,6 +1,8 @@
 #summary Installing a Newton ROM on an iOS device
 #labels Featured
 
+This is a source-code only release! You will have to compile and sign the app yourself. I have no approval for the Itunes store, so I can not distribute Einstein for iOS (yet?). Any help to get Einstein up to the standards of The Store are greatly appreciated.
+
 = Introduction =
 
 Einstein Emulator requires an MP2x00 US ROM image. 
