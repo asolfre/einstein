@@ -1,13 +1,25 @@
-#summary One-sentence summary of this page.
+#summary Installing a Newton ROM on an iOS device
 
 = Introduction =
 
-Add your content here.
-
+Einstein Emulator requires an MP2x00 US ROM image. 
+The ROM file must be named 717006.rom and copied to 
+your device using the iTunes File Sharing feature.
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Use one of the methods described here to acquire a US Neewton MP2x00 ROM:
+
+http://code.google.com/p/einstein/downloads/detail?name=UserManual.pdf&can=2&q=#makechanges
+
+Rename the ROM to _717006.rom_ and upload it to your iOS device using _iTunes_.
+
+  * launch iTunes
+  * connect your iPhone or iPad device
+  * click on your device in the _Devices_ list
+  * select the _Apps_ tab
+  * under _File Sharing_, click on the _iEinstein_ icon
+  * drag the ROM file into the _iEinstein Documents_ list
+  * synchronize your device and relaunch iEinstein
+
+iEinstein also accepts the Lantern DDK image files. They must be named "717006.aif" and "717006.rex".
