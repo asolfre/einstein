@@ -6,9 +6,9 @@ Einstein Emulator requires an MP2x00 US ROM image.
 The ROM file must be named 717006.rom and copied to 
 your device using the iTunes File Sharing feature.
 
-= Details =
+= Installing the ROM =
 
-Use one of the methods described here to acquire a US Neewton MP2x00 ROM:
+Use one of the methods described here to acquire a US Newton MP2x00 ROM:
 
 http://code.google.com/p/einstein/downloads/detail?name=UserManual.pdf&can=2&q=#makechanges
 
@@ -23,3 +23,17 @@ Rename the ROM to _717006.rom_ and upload it to your iOS device using _iTunes_.
   * synchronize your device and relaunch iEinstein
 
 iEinstein also accepts the Lantern DDK image files. They must be named "717006.aif" and "717006.rex".
+
+= Installing Packages =
+
+You can download hundreds of packages from http://www.unna.org/
+
+  * connect your iPhone to your computer and run iTunes
+  * launch iEinstein on your device and let it boot up all the way
+  * open File Sharing in iTunes and drag the packages into the file list
+    * the iPhone will briefly show "Sync in Progress"
+    * when back in iEinstein, Newton OS will install the package
+
+The package in the file sharing list is no longer needed, you can delete it now or keep it around. To reinstall a package, drop it into the file list again.
+
+Use the Newton OS  Drawer to uninstall packages from the Newton by tapping and holding, then choosing _delete_ from the file menu.
