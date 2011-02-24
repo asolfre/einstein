@@ -32,7 +32,7 @@ Einstein requires an 8 MB Newton ROM dump image (8,388,608 bytes exactly) to run
 
 For iOS builds, it must be named {{{717006.rom}}} and in the application's Documents folder at runtime.
 
-For the iOS simulator, the path to this file would be be: /(Home)/Library/Application Support/iPhone Simulator/(SDK Version)/Applications/(UUID)/Documents/717006.rom
+For the iOS simulator, the path to this file will be something like: /(Home)/Library/Application Support/iPhone Simulator/(SDK Version)/Applications/(Einstein UUID)/Documents/717006.rom
 
 For running on an iOS device, use iTunes to copy the ROM file to the device.
 
