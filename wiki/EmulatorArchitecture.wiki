@@ -22,7 +22,7 @@ On Mac OS X, the flash file is created in ~/Library/Application Support/Einstein
 
 == First Startup ==
 
-Einstein creates a file (usually named 717006.img, assuming you're using the 717006 ROM) the first time it runs.  This 16 MB file mirrors the SImage structure defined in the code.  The first 8 MB are a copy of the ROM dump.  The next 8 MB contain a copy of the REX file (padded out to 8 MB with zeros).  At the end of the file is some metadata used by Einstein.
+Einstein creates a file (usually named 717006.img, assuming you're using the 717006 ROM) the first time it runs.  This 16 MB file mirrors the SImage structure defined in the code.  The first 8 MB are a copy of the ROM dump.  The next 8 MB contain a copy of the REX file (padded out to 8 MB with zeros).  The ROM and REX images are byte-swapped on little-endian host OSes as they are written to the file.  At the end of the file is some metadata used by Einstein.
 
 Patches are then applied to this "cooked" ROM image, so that the original ROM image remains unmodified.
 
