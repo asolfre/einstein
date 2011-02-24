@@ -34,7 +34,7 @@ For iOS builds, it must be named {{{717006.rom}}} and in the application's Docum
 
 For the iOS simulator, the path to this file will be something like: /(Home)/Library/Application Support/iPhone Simulator/(SDK Version)/Applications/(Einstein UUID)/Documents/717006.rom
 
-For running on an iOS device, use iTunes to copy the ROM file to the device as described on the iOS.
+For running on an iOS device, use iTunes to copy the ROM file to the device as described on the [iOS] page.
 
 For running on Mac OS X, the ROM file can be selected at runtime.
 
