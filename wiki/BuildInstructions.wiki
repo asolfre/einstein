@@ -24,9 +24,15 @@ For your convenience, a binary of the Einstein REX is available under the {{{_Da
   # From the same menu, choose either iPad or iPhone as a target. (for example: iPhone Simulator 4.2)
     * due to a bug in Xcode, the iPad emulator version will not launch correctly - the iPhone simulator however will
     * due to another bug, once you built an iOS version, you can not switch back to build a native OS X version. If you want to switch back to native development, you must quit Xcode and delete the file `_Build_/Xcode3/Einstein.xcodeproj/yourName.pbxuser`
-  # iEinstein expects an 8 MB ROM dump image (8,388,608 bytes exactly) named `717006` in the `_Data_` directory at compile time - this must a binary copy of the ROM, a debugger image will currently not work
-  # "K" is part of the SVN repository and will build automatically
-  # Click build.
+  # Build!
+
+Einstein for iOS expects an 8 MB ROM dump image (8,388,608 bytes exactly) named {{{717006.rom}}} in the application's Documents folder at runtime.
+
+For the iOS simulator, the path to this file will be: /[Home]/Library/Application Support/iPhone Simulator/[SDK Version]/Applications/[UUID]/Documents/717006.rom
+
+For running on the device, use iTunes to copy the ROM file to the device.
+
+This must a binary copy of the ROM, a debugger image will currently not work.  An MD5 checksum of a known working ROM dump is 70dc5f5f3102e44f15dc93f356b98add.
 
 == Building on Unix (including MacOS X) and Cygwin, as a native build, using Jam ==
 
