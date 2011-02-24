@@ -15,11 +15,13 @@ For your convenience, a binary of the Einstein REX is available under the {{{_Da
   # Choose "Einstein" as your Active Target.
   # Build!
 
-== Building on MacOS X, for iOS 3.2 and up (iPhone, etc), using Xcode 3 ==
+== Building on MacOS X, for iOS 3.2 and up, using Xcode 3 ==
 
-  # Get Xcode 3.2.4 from the Apple Developers website and install it with the iOS 4 SDK
-  # Open the Einstein Xcode project.
-  # Choose iEinstein as a target for either the emulator or for the real device
+  # Get the latest Xcode with iOS SDK from Apple and install it.
+  # Open Einstein.xcodeproj, located in {{{_Build_/Xcode3}}}
+  # Choose "iOSEinstein" as your Active Target.
+  # From the same menu, choose whether you are building for Simulator or Device (actual hardware).
+  # From the same menu, choose either iPad or iPhone as a target. (for example: iPhone Simulator 4.2)
     * due to a bug in Xcode, the iPad emulator version will not launch correctly - the iPhone simulator however will
     * due to another bug, once you built an iOS version, you can not switch back to build a native OS X version. If you want to switch back to native development, you must quit Xcode and delete the file `_Build_/Xcode3/Einstein.xcodeproj/yourName.pbxuser`
   # iEinstein expects a binary ROM image (8MB exactly) named `717006` in the `_Data_` directory at compile time - this must a binary copy of the ROM, a debugger image will currently not work
@@ -29,7 +31,7 @@ For your convenience, a binary of the Einstein REX is available under the {{{_Da
 == Building on Unix (including MacOS X) and Cygwin, as a native build, using Jam ==
 
   # Install Jam 2.5. Not btjam, not ftjam, regular jam. You can get it from MacPorts on MacOS X. On Ubuntu, the debian package jam is fine. You can also compile it from source: ftp://ftp.perforce.com/pub/jam/jam-2.5.zip
-  # Make sure you have {{libstdc++-devel}} installed as well.
+  # Make sure you have {{{libstdc++-devel}}} installed as well.
   # K is part of the repository. You may have to update Makefiles. Unfortunately it vanished from SourceForge
   # Compile K with Jam with {{{cd <path_to_K>/_Build_/Jam/ && jam}}}
   # Get libffi. On MacOS X, I suggest getting with MacPorts.  There seem to be pre-built copies for various platforms in the Einstein project in svn too.
