@@ -2,21 +2,20 @@
 
 = General remarks =
 
-Einstein relies on K which is part of the SVN repository. It is built using Xcode or [http://www.perforce.com/jam/jam.html Perforce Jam].
+Einstein relies on a framework called "K" which is included in the SVN repository. It is built using Xcode or [http://www.perforce.com/jam/jam.html Perforce Jam].
 
-For now, Einstein ROM Extension can only be built using Apple Newton C++ Tools and Apple Newton ToolKit, available on [http://www.unna.org/ UNNA] as part of the [http://www.unna.org/view.php?/development/NewtonDev NewtonDev environment] and running in MacOS 9 (I actually use Classic and [http://www.kallisys.com/mac/toolserver(1)/ toolserver(1)]).
+For now, the Einstein ROM Extension (REX) can only be built using Apple Newton C++ Tools and Apple Newton ToolKit, available on [http://www.unna.org/ UNNA] as part of the [http://www.unna.org/view.php?/development/NewtonDev NewtonDev environment] and running in MacOS 9 (I actually use Classic and [http://www.kallisys.com/mac/toolserver(1)/ toolserver(1)]).
 
 For your convenience, a binary of the Einstein REX is available under the {{{_Data_/}}} directory.
 
-= Building on MacOS X, for MacOS X, using Xcode =
+= Building on MacOS X, for MacOS X, using Xcode 3 =
 
-  # Get latest Xcode from Apple Connection website and install it with 10.3.9 and 10.4u cross-SDKs (this is the default).
-  # Open the Einstein Xcode project.
-  # Choose your target (I suggest Einstein.app)
-  # K is part of the SVN repository and will build automatically
-  # Click build.
+  # Get the latest Xcode from Apple and install it.
+  # Open Einstein.xcodeproj, located in {{{_Build_/Xcode3}}}
+  # Choose "Einstein" as your Active Target.
+  # Build!
 
-= Building on MacOS X, for iOS 3.2 and up (iPhone, etc), using Xcode =
+= Building on MacOS X, for iOS 3.2 and up (iPhone, etc), using Xcode 3 =
 
   # Get Xcode 3.2.4 from the Apple Developers website and install it with the iOS 4 SDK
   # Open the Einstein Xcode project.
