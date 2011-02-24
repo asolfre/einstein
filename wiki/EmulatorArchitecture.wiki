@@ -20,6 +20,10 @@ The flash file simulates the on-board flash memory of an actual Newton.  It is c
 
 On Mac OS X, the flash file is created in ~/Library/Application Support/Einstein Platform
 
+== First Startup ==
+
+Einstein creates a file (usually named 717006.img, assuming you're using the 717006 ROM) the first time it runs.  This 16 MB file mirrors the SImage structure defined in the code.  The first 8 MB are a copy of the ROM dump.  The next 8 MB contain a copy of the REX file (padded out to 8 MB with zeros).  At the end of the file is some metadata used by Einstein.
+
 == TEmulator ==
 
 TEmulator is the primary class that runs the emulation.  TEmulator encapsulates all of the other hardware abstractions in Einstein, including display hardware, sound hardware, CPU, memory, serial ports, etc.  Once properly created and initialized, TEmulator's Run() method is dispatched on its own thread and drives the main loop of the emulator.
