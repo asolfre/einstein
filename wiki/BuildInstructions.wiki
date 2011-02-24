@@ -4,7 +4,7 @@
 
 Einstein relies on a framework called "K" which is included in the SVN repository. It is built using Xcode or [http://www.perforce.com/jam/jam.html Perforce Jam].
 
-For now, the Einstein ROM Extension (REX) can only be built using Apple Newton C++ Tools and Apple Newton ToolKit, available on [http://www.unna.org/ UNNA] as part of the [http://www.unna.org/view.php?/development/NewtonDev NewtonDev environment] and running in MacOS 9 (I actually use Classic and [http://www.kallisys.com/mac/toolserver(1)/ toolserver(1)]).
+For now, the Einstein ROM Extension (REX) can only be built using Apple Newton C++ Tools and Apple Newton Toolkit, available on [http://www.unna.org/ UNNA] as part of the [http://www.unna.org/view.php?/development/NewtonDev NewtonDev environment] and running in Mac OS 9 or Classic on Mac OS X.
 
 For your convenience, a binary of the Einstein REX is available under the {{{_Data_/}}} directory.
 
