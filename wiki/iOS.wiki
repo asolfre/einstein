@@ -11,7 +11,7 @@ your device using the iTunes File Sharing feature.
 
 = Installing the ROM =
 
-See [[Dumping the ROM]] to learn how to extract a ROM image from your owned Newton device.
+See [Dumping the ROM] to learn how to extract a ROM image from your owned Newton device.
 
 Rename the ROM to _717006.rom_ and upload it to your iOS device using _iTunes_.
 
