@@ -1,7 +1,7 @@
 #summary Installing a Newton ROM on an iOS device
 #labels Featured
 
-This is a source-code only release! You will have to compile and sign the app yourself. I have no approval for the iTunes store, so I can not distribute Einstein for iOS. Any help to get Einstein up to the standards of the app store are greatly appreciated.
+This is a source-code only release! You will have to compile and sign the app yourself. Einstein was rejected by the App Store for two reasons: it executes code that is uploaded (the ROM), and it resembles and Apple product (which would be quite hard to avoid for an emulator). But don't fret. If you have a developer license, use it. Einstein should also run on jailbroken devices. Also, an Android version is currently being developed.
 
 = Introduction =
 
