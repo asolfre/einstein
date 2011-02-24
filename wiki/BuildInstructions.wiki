@@ -1,6 +1,6 @@
 #summary How to build Einstein
 
-= General remarks =
+== General remarks ==
 
 Einstein relies on a framework called "K" which is included in the SVN repository. It is built using Xcode or [http://www.perforce.com/jam/jam.html Perforce Jam].
 
@@ -8,14 +8,14 @@ For now, the Einstein ROM Extension (REX) can only be built using Apple Newton C
 
 For your convenience, a binary of the Einstein REX is available under the {{{_Data_/}}} directory.
 
-= Building on MacOS X, for MacOS X, using Xcode 3 =
+== Building on MacOS X, for MacOS X, using Xcode 3 ==
 
   # Get the latest Xcode from Apple and install it.
   # Open Einstein.xcodeproj, located in {{{_Build_/Xcode3}}}
   # Choose "Einstein" as your Active Target.
   # Build!
 
-= Building on MacOS X, for iOS 3.2 and up (iPhone, etc), using Xcode 3 =
+== Building on MacOS X, for iOS 3.2 and up (iPhone, etc), using Xcode 3 ==
 
   # Get Xcode 3.2.4 from the Apple Developers website and install it with the iOS 4 SDK
   # Open the Einstein Xcode project.
@@ -26,7 +26,7 @@ For your convenience, a binary of the Einstein REX is available under the {{{_Da
   # "K" is part of the SVN repository and will build automatically
   # Click build.
 
-= Building on Unix (including MacOS X) and Cygwin, as a native build, using Jam =
+== Building on Unix (including MacOS X) and Cygwin, as a native build, using Jam ==
 
   # Install Jam 2.5. Not btjam, not ftjam, regular jam. You can get it from MacPorts on MacOS X. On Ubuntu, the debian package jam is fine. You can also compile it from source: ftp://ftp.perforce.com/pub/jam/jam-2.5.zip
   # Make sure you have {{libstdc++-devel}} installed as well.
@@ -35,25 +35,25 @@ For your convenience, a binary of the Einstein REX is available under the {{{_Da
   # Get libffi. On MacOS X, I suggest getting with MacPorts.  There seem to be pre-built copies for various platforms in the Einstein project in svn too.
   # Compile Einstein with Jam with {{{cd <path_to_einstein>/_Build_/Jam/ && jam -sK=<path_to_K>}}} or {{{cd <path_to_einstein>/_Build_/Jam/ && jam -sK=<path_to_K> -sC++FLAGS=-I/path/to/libffi/include -sCCFLAGS=-I/path/to/libffi/include -sLINKFLAGS=-I/path/to/libffi/include}}} if libffi isn't installed in a standard path that the compiler will find.  For example:
 
-{{{
-jam -sjittarget=generic -sC++FLAGS="-I/usr/local/include -I/root/einstein/Einstein/libffi-linux/include/ -L/root/einstein/Einstein/libffi-linux/lib" -sCCFLAGS="-I/usr/local/include -I/root/einstein/Einstein/libffi-linux/include/ -L/root/einstein/Einstein/libffi-linux/lib"  -sK=/root/K/
-}}}
+{{{jam -sjittarget=generic -sC++FLAGS="-I/usr/local/include -I/root/einstein/Einstein/libffi-linux/include/ -L/root/einstein/Einstein/libffi-linux/lib" -sCCFLAGS="-I/usr/local/include -I/root/einstein/Einstein/libffi-linux/include/ -L/root/einstein/Einstein/libffi-linux/lib"  -sK=/root/K/}}}
 
-== Notes ==
+=== Notes ===
+
 If you got libffi with MacPorts as suggested, you don't need to specify its path on the command line. You will very probably need to edit the Jamfile to cope with your target. 
 
-= On Unix (including MacOS X), as cross build, using Jam =
+== On Unix (including MacOS X), as cross build, using Jam ==
 
 The general method is the following:
 
   # Install Jam 2.5. Not btjam, not ftjam, regular jam. You can get it from MacPorts on MacOS X. On Ubuntu, the debian package jam is fine. You can also compile it from source: ftp://ftp.perforce.com/pub/jam/jam-2.5.zip
   # Get K (preferably from CVS) at http://sourceforge.net/projects/KLibs/
   # Edit K's Jamfile so it will work with your setup.
-  # Compile K with Jam with cd <path_to_K>/_Build_/Jam/ && jam -starget=<cross_target>
+  # Compile K with Jam with {{{cd <path_to_K>/_Build_/Jam/ && jam -starget=<cross_target>}}}
   # Edit Einstein's Jamfile so it will work with your setup.
-  # Compile Einstein with Jam with cd <path_to_einstein>/_Build_/Jam/ && jam -sK=<path_to_K> -starget=<cross_target>
+  # Compile Einstein with Jam with {{{cd <path_to_einstein>/_Build_/Jam/ && jam -sK=<path_to_K> -starget=<cross_target>}}}
 
 == How I built cross-binaries ==
+
   * OpenZaurus 3.4.5: with crosstool compilers, cf OpenZaurusBuildInstructions.
   * Nokia 770 OS 2005: with crosstool compilers (built with gcc3 on the Mac).
   * Debian x86: with crosstool compilers.
