@@ -23,7 +23,7 @@ For your convenience, a binary of the Einstein REX is available under the {{{_Da
   # From the same menu, choose whether you are building for Simulator or Device (actual hardware).
   # From the same menu, choose either iPad or iPhone as a target. (for example: iPhone Simulator 4.2)
     * due to a bug in Xcode, the iPad emulator version will not launch correctly - the iPhone simulator however will
-    * due to another bug, once you built an iOS version, you can not switch back to build a native OS X version. If you want to switch back to native development, you must quit Xcode and delete the file `_Build_/Xcode3/Einstein.xcodeproj/yourName.pbxuser`
+    * due to another bug, once you built an iOS version, you can not switch back to build a native OS X version. If you want to switch back to native development, you must hold down the Alt key when clicking on the 'Overview' pulldown menu
   # Build!
 
 == About the ROM ==
