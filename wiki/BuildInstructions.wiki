@@ -30,6 +30,8 @@ For your convenience, a binary of the Einstein REX is available under the {{{_Da
 
 Einstein requires an 8 MB Newton ROM dump image (8,388,608 bytes exactly) to run.  Please see DumpingTheRom for more information about extracting the ROM image from your owned Newton device.
 
+Development efforts are currently concentrated on the 717006 ROM, which corresponds to Apple's last official release of Newton OS -- version 2.1.
+
 For iOS builds, it must be named {{{717006.rom}}} and in the application's Documents folder at runtime.
 
 For the iOS simulator, the path to this file will be something like: /(Home)/Library/Application Support/iPhone Simulator/(SDK Version)/Applications/(Einstein UUID)/Documents/717006.rom
