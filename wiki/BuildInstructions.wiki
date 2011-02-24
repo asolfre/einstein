@@ -28,7 +28,7 @@ For your convenience, a binary of the Einstein REX is available under the {{{_Da
 
 == About the ROM ==
 
-Einstein requires an 8 MB Newton ROM dump image (8,388,608 bytes exactly) to run.
+Einstein requires an 8 MB Newton ROM dump image (8,388,608 bytes exactly) to run.  Please see the [[iOS]] page for more information about extracting the ROM image from your owned Newton device.
 
 For iOS builds, it must be named {{{717006.rom}}} and in the application's Documents folder at runtime.
 
@@ -38,7 +38,7 @@ For running on an iOS device, use iTunes to copy the ROM file to the device.
 
 For running on Mac OS X, the ROM file can be selected at runtime.
 
-This must a binary copy of the ROM, a debugger image will currently not work.  An MD5 checksum of a known working ROM dump is 70dc5f5f3102e44f15dc93f356b98add.
+An MD5 checksum of a known working ROM dump is 70dc5f5f3102e44f15dc93f356b98add.
 
 == Building on Unix (including MacOS X) and Cygwin, as a native build, using Jam ==
 
