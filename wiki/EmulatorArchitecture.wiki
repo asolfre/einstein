@@ -38,7 +38,7 @@ In addition to TEmulator's thread, TInterruptManager::Run() executes in its own 
 
 == TSoundManager ==
 
-The sound manager provides an interface to the host OS's sound-producing hardware.
+The sound manager provides an interface to the host OS's sound hardware.  It receives raw sound buffers from the emulator and routes them to the host OS for playback, as well as accepting sound input.
 
 TNullSoundManager is a direct subclass that provides no sound input/output capabilities.
 
