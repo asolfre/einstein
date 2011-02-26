@@ -4,10 +4,10 @@
 
 Einstein has a built-in monitor that allows you to:
 
-- pause and resume Newton emulation
-- view disassembly, CPU registers, MMU information, and memory
-- set breakpoints
-- and more!
+* pause and resume Newton emulation
+* view disassembly, CPU registers, MMU information, and memory
+* set breakpoints
+* and more!
 
 Currently the monitor is available in command-line and Mac OS X builds of Einstein.  In the Mac OS X version, it can be accessed by choosing Window > Monitor.
 
