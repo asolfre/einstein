@@ -13,7 +13,7 @@ Currently the monitor is available in command-line and Mac OS X builds of Einste
 
 == Commands ==
 
-  * *stop* stops the emulator
+  * *stop* stops the emulator, displaying registers and code at the current pc
   * *run* resumes the emulator  
   * *mmu* displays MMU status
   * *step* steps one instruction
