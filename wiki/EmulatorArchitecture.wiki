@@ -52,6 +52,8 @@ TScreenManager is an abstract base class that handles display screen output and 
 
 For iOS, it is subclassed by TIOSScreenManager.  For Mac OS X, TCocoaScreenManager.
 
-TScreenManager supplies basic bitmap blitting functions designed to work in any of the emulated Newton's screen orientations.  It also provides methods for getting pen and key inputs from the host OS back to the emulator.
+TScreenManager supplies basic bitmap blitting functions designed to work in any of the emulated Newton's screen orientations.  It is up to the subclass to display the emulated Newton's bitmap.
 
-TScreenManager also receives calls from the emulator when the emulated Newton has a power button, backlight toggle, screen reorientation, or contrast change event.
+Subclasses of TScreenManager also convey pen and key inputs from the host OS back to the emulator.
+
+TScreenManager receives calls from the emulator when the emulated Newton has a power button, backlight toggle, screen reorientation, or contrast change event.
