@@ -57,3 +57,7 @@ TScreenManager supplies basic bitmap blitting functions designed to work in any 
 Subclasses of TScreenManager also convey pen and key inputs from the host OS back to the emulator.
 
 TScreenManager receives calls from the emulator when the emulated Newton has a power button, backlight toggle, screen reorientation, or contrast change event.
+
+== JIT ==
+
+The emulator performs just-in-time (JIT) translation of the Newton's ARM CPU instruction set to host-native instructions.  JIT is performed in units of pages (1K) as the emulator follows the Newton CPU's program counter (PC).  A cache of translated pages is kept in memory to boost performance.
