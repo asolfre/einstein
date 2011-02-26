@@ -36,6 +36,14 @@ In addition to TEmulator's thread, TInterruptManager::Run() executes in its own 
 
 == Network Manager ==
 
-== Sound Manager ==
+== TSoundManager ==
+
+The sound manager provides an interface to the host OS's sound-producing hardware.
+
+TNullSoundManager is a direct subclass that provides no sound input/output capabilities.
+
+On Mac OS X and iOS, TSoundManager is subclassed by TBufferedSoundManager which is in turn subclassed by TCoreAudioSoundManager.
+
+For other platforms, the open source portaudio library is used via the TPortAudioSoundManager subclass of TBufferedSoundManager.
 
 == Screen Manager ==
