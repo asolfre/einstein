@@ -30,6 +30,8 @@ Patches are then applied to this "cooked" ROM image, so that the original ROM im
 
 TEmulator is the primary class that runs the emulation.  TEmulator encapsulates all of the other hardware abstractions in Einstein, including display hardware, sound hardware, CPU, memory, serial ports, etc.  Once properly created and initialized, TEmulator's Run() method is dispatched on its own thread and drives the main loop of the emulator.
 
+In addition to TEmulator's thread, TInterruptManager::Run() executes in its own thread, as does TNetworkManager::Run().
+
 == Platform Manager ==
 
 == Network Manager ==
