@@ -32,9 +32,9 @@ TEmulator is the primary class that runs the emulation.  TEmulator encapsulates 
 
 In addition to TEmulator's thread, TInterruptManager::Run() executes in its own thread, as does TNetworkManager::Run().
 
-== Platform Manager ==
+== TPlatformManager ==
 
-== Network Manager ==
+== TNetworkManager ==
 
 == TSoundManager ==
 
@@ -46,4 +46,12 @@ On Mac OS X and iOS, TSoundManager is subclassed by TBufferedSoundManager which 
 
 For other platforms, the open source portaudio library is used via the TPortAudioSoundManager subclass of TBufferedSoundManager.
 
-== Screen Manager ==
+== TScreenManager ==
+
+TScreenManager is an abstract base class that handles display screen output and pen/keyboard input in a host-agnostic way.
+
+For iOS, it is subclassed by TIOSScreenManager.  For Mac OS X, TCocoaScreenManager.
+
+TScreenManager supplies basic bitmap blitting functions designed to work in any of the emulated Newton's screen orientations.  It also provides methods for getting pen and key inputs from the host OS back to the emulator.
+
+TScreenManager also receives calls from the emulator when the emulated Newton has a power button, backlight toggle, screen reorientation, or contrast change event.
