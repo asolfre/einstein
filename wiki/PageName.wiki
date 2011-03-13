@@ -1,0 +1,11 @@
+#summary Einstein on Android Devices
+
+NewtonOS is now running under Android 2.2 on a Samsung Galaxy Pad. This is still a little way from releasing, but I am quite positive that this will be the first version of Einstein running on a PDA that has the potential to replace the MessagePad.
+
+On the low end, this will likely run fine on a hacked $200 Nook Color, but as a highlight, I will hopefully be able to support the HTC Flyer which comes standard with a stylus.
+
+For the brave among you Android device owners, you will find an early test version in the Downloads section.
+
+Copy the file 717006.rom and Einstein.rex to /Download/Einstein on your Android device. Then install and launch the Android Package. The first launch will take quite a while, but after the Flash RAM is set up, further launches will be quicker.
+
+-Matthias
