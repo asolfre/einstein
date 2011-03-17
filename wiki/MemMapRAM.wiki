@@ -2,6 +2,14 @@
 
 The top part of the RAM will be mapped to various places in virtual memory using the MMU lookup table.
 
+Physical Map
 || `04000000` || 1st level MMU table (16kB) ||
 || `04004000` || RAM ||
 || `043c0000`<br>'043fffff` || Video RAM: 320x480/2=76800 bytes ||
+
+Virtual Map (no details yet, must verify the addresses and ranges!). Still missing is the Serial Number ROM (may be i2c?), DMA, Interrup registers, etc. .
+|| `01b00000` || Jump Table ||
+|| `04000000` || 1st level MMU table (16kB) ||
+|| `043c0000` || Video RAM: 320x480/2=76800 bytes ||
+|| `0C100000` || System Variables ||
+|| `0f180000` || GPIO, General Purpose I/O ||
