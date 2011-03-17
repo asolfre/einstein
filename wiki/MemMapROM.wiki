@@ -1,0 +1,12 @@
+#summary One-sentence summary of this page.
+
+see also: [MemoryMap Memory Map]
+
+The Newton ROM is devided into two major parts. The first part is the code that is executed at startup and during run time. The second part is a "ROM Extension". NewtonOS supports multiple ROM Extensions that contain all kinds of data.
+
+An optional ROM extension can be placed at 8MB. Einstein uses this REx to replace the original NewtonOS drives with Einstein specific drivers that call native code to do their business.
+
+`00000000` to `007fffff`
+|| `00000000`<br>8MB<br>`0071FC48` || [MemMapROMOS NewtonOS] ||
+|| `0071FC4C`<br>900kB<br>`0x7FB810` || [MemMapROMRex ROM Extension] ||
+|| `7FB814`<br>4MB<br>`007fffff` || (empty) ||
