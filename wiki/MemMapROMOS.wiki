@@ -1,6 +1,6 @@
 #summary NewtonOS part of the ROM
 
-see also: MemMapROM
+see also: [MemMapROM Newton ROM]
 
 || `00000000` || ARM Interrupt vectors ||
 || `00000020` || Data ||
