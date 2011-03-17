@@ -1,6 +1,6 @@
 #summary An overview of the Mssage Pad and Newton OS architecture.
 
-see also: MemMap
+see also: MemoryMap
 
 = Introduction =
 
