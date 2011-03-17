@@ -1,0 +1,9 @@
+#summary NewtonOS part of the ROM
+
+|| `00000000` || ARM Interrupt vectors ||
+|| `00000020` || Data ||
+|| `00002000` || ARM Jump Tables ||
+|| `00021438` || ARM assembler code routines ||
+|| `003AF000` || NewtonScript Magic Pointer table ||
+|| `003AFDA8` || NewtonScript routines and programs ||
+|| `006853DC`<br>`0071FC48` || Dictionaries ||
