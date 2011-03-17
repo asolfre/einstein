@@ -1,9 +1,11 @@
-#summary Newton OS 2. Memory Map
+#summary Newton OS 2.1 Physical Memory Map
+
+see also: [MemMapVirtual Virtual Memory Map]
 
 {{{
 
 +----------+
-| 00000000 |  OS ROM
+| 00000000 |  [MemMapROM OS ROM]
 |     8MB  |
 | 007fffff |
 +----------+
@@ -15,7 +17,7 @@
 :          :
 |          |
 +----------+
-| 02000000 |  Flash Memory
+| 02000000 |  [MemMapFlash Flash Memory]
 |     4MB  |
 | 023fffff |
 +----------+
@@ -23,7 +25,7 @@
 :          :
 |          |
 +----------+
-| 04000000 |  RAM
+| 04000000 |  [MemMapRAM RAM (physical)]
 |     4MB  |
 | 043fffff |
 +----------+
@@ -31,7 +33,7 @@
 :          :
 |          |
 +----------+
-| 0f000000 |  Hardware Registers
+| 0f000000 |  [MemMapIO Hardware I/O Registers]
 |     ?MB  |
 | ???????? |
 +----------+
