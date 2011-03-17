@@ -2,44 +2,13 @@
 
 see also: [MemMapVirtual Virtual Memory Map]
 
-{{{
 
-+----------+
-| 00000000 |  [MemMapROM OS ROM]
-|     8MB  |
-| 007fffff |
-+----------+
-| 00800000 |  (Einstein ROM Extension)
-|     8MB  |
-| 00ffffff |
-+----------+
-|          |
-:          :
-|          |
-+----------+
-| 02000000 |  [MemMapFlash Flash Memory]
-|     4MB  |
-| 023fffff |
-+----------+
-|          |
-:          :
-|          |
-+----------+
-| 04000000 |  [MemMapRAM RAM (physical)]
-|     4MB  |
-| 043fffff |
-+----------+
-|          |
-:          :
-|          |
-+----------+
-| 0f000000 |  [MemMapIO Hardware I/O Registers]
-|     ?MB  |
-| ???????? |
-+----------+
-|          |
-:          :
-|          |
-+----------+
-
-}}}
+|| `00000000`<br>8MB<br>`007fffff` || [MemMapROM OS ROM] ||
+|| `00800000`<br>8MB<br>`00ffffff` ||  (Einstein ROM Extension) ||
+||...||
+|| `02000000`<br>4MB<br>`024fffff` || [MemMapFlash Flash Memory] ||
+||...||
+|| `04000000`<br>4MB<br>`044fffff` || [MemMapRAM RAM (physical)] ||
+||...||
+|| `0f000000`<br>?MB<br>`0fffffff` || [MemMapIO Hardware I/O Registers] ||
+||<br><br>...<br><br>||
