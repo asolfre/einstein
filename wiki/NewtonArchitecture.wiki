@@ -1,5 +1,7 @@
 #summary An overview of the Mssage Pad and Newton OS architecture.
 
+see also: MemMap
+
 = Introduction =
 
 This page will explain a little bit about the Newton OS internals and why it cooperates so greatly with the Message Pad hardware.
