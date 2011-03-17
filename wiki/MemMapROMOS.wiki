@@ -1,5 +1,7 @@
 #summary NewtonOS part of the ROM
 
+see also: MemMapROM
+
 || `00000000` || ARM Interrupt vectors ||
 || `00000020` || Data ||
 || `00002000` || ARM Jump Tables ||
