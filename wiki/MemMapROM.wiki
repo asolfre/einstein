@@ -8,5 +8,5 @@ An optional ROM extension can be placed at 8MB. Einstein uses this REx to replac
 
 `00000000` to `007fffff`
 || `00000000`<br>8MB<br>`0071FC48` || [MemMapROMOS NewtonOS] ||
-|| `0071FC4C`<br>900kB<br>`0x7FB810` || [MemMapROMRex ROM Extension] ||
+|| `0071FC4C`<br>900kB<br>`0x7FB810` || [MemMapROMRex ROM Extension] (REx) ||
 || `7FB814`<br>4MB<br>`007fffff` || (empty) ||
