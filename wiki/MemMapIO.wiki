@@ -1,13 +1,10 @@
 #summary Physical RAM Map
 
-The top part of the RAM will be mapped to various places in virtual memory using the MMU lookup table.
+see also: [MemoryMap Memory Map]
 
-Physical Map
-|| `00000000` || Main ROM ||
-|| `00800000` <br> `01000000` || ROM Extension ||
-|| `04000000` || 1st level MMU table (16kB) ||
-|| `04004000` || RAM ||
-|| `043c0000`<br>`043fffff` || Physical Video RAM: 320x480/2=76800 bytes ||
+This is not very detailed and not very much sorted at all. Please update.
+
+Physical Map:
 || `0f001000` || First I/O address ||
 || `0f086c00` || Start of DMA Controller ||
 || `0f110000` || Power Supply Control ||
@@ -31,11 +28,3 @@ Physical Map
 || `0f1d0000` || infrared serial port base ||
 || `0f1e0000` || digitizer serial port base ||
 || `0f1e0000` || modem serial port base ||
-
-Virtual Map (no details yet, must verify the addresses and ranges!). Still missing is the Serial Number ROM (may be i2c?), DMA, Interrupt registers, ByteCode memory etc. .
-|| `01b00000` || Jump Table ||
-|| `04000000` || 1st level MMU table (16kB) ||
-|| `0C100000` || System Variables ||
-|| `0f180000` || GPIO, General Purpose I/O ||
-|| `60000000` || NewtonScript expanded (running) apps ||
-|| `E0000000` || Video RAM: 320x480/2=76800 bytes ||
