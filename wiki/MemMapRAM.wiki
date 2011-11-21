@@ -3,6 +3,8 @@
 The top part of the RAM will be mapped to various places in virtual memory using the MMU lookup table.
 
 Physical Map
+|| `00000000` || Main ROM ||
+|| `00800000` <br> `01000000` || ROM Extension ||
 || `04000000` || 1st level MMU table (16kB) ||
 || `04004000` || RAM ||
 || `043c0000`<br>`043fffff` || Physical Video RAM: 320x480/2=76800 bytes ||
@@ -22,9 +24,13 @@ Physical Map
 || `0f18e000` || GPIO polarity ||
 || `0f18e800` || GPIO direction ||
 || `0f18e800` || GPIO data ||
+|| `0f1c0000` || external serial port base ||
 || `0f1c4400` || Geo Port Status ||
 || `0f1c6000` || Geo Port Write Byte ||
 || `0f1c6700` || Geo Port Read Byte ||
+|| `0f1d0000` || infrared serial port base ||
+|| `0f1e0000` || digitizer serial port base ||
+|| `0f1e0000` || modem serial port base ||
 
 Virtual Map (no details yet, must verify the addresses and ranges!). Still missing is the Serial Number ROM (may be i2c?), DMA, Interrupt registers, ByteCode memory etc. .
 || `01b00000` || Jump Table ||
