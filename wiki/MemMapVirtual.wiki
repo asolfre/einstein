@@ -1,0 +1,20 @@
+#summary Virtual Memory Map
+
+see also: [MemoryMap Newton OS 2.1 Physical Memory Map]
+
+|| `00000000` || ROM at `00000000`, Domain 0 (unless patched!) ||
+|| `00800000` <br> `00f00000` || ROM Extension at `00800000`, Domain 0 ||
+|| ... || ||
+|| `01800000` <br>  `0180ffff`|| at `00013000`, Domain 0 ||
+|| ... || ||
+|| `01a00000` <br>  `01c1ffff`|| ROM Jump Tables at `00002000`, Domain 0, may get patched, sparse use ||
+|| ... || ||
+|| `01d80000` <br>  `01d9ffff`|| Magic Pointer Table at `003af000`, Domain 0, may get patched, sparse use ||
+|| ... || ||
+|| `01e00000` <br>  `01efffff`|| REx Jump Table at `007ee000`, Domain 0, may get patched, sparse use ||
+|| ... || ||
+|| `30000000` || Flash Memory Bank 1 at `02000000`, rw/ro, Domain 0 ||
+|| `30400000` <br> `30700000` || Flash Memory Bank 1 at `10000000`, rw/ro, Domain 0 ||
+|| ... || ||
+|| `34000000` || Flash Memory Bank 1 at `02000000`, rw/rw, Domain 0 ||
+|| `34400000` <br> `34700000` || Flash Memory Bank 1 at `10000000`, rw/rw, Domain 0 ||
