@@ -29,8 +29,30 @@ see also: [MemoryMap Newton OS 2.1 Physical Memory Map]
 || ... || ||
 || `0c310000` <br> `0c328fff` || RAM, rw/rw, Domain 3, only 1k or 2k blocks ||
 || ... || ||
+|| `0c600000` <br> `0c675fff` || RAM, rw/rw, Domain 0 ||
+|| ... || ||
+|| `0c984000` <br> `0c984fff` || RAM, rw/rw, Domain 0, 2k block ||
+|| ... || ||
+|| `0ca6b000` <br> `0ca8ffff` || RAM, rw/rw, Domain 0 ||
+|| ... || ||
+|| `0cc79000` <br> `0ccedfff` || RAM, rw/rw, Domain 0 ||
+|| ... || ||
+|| `0cd58000` <br> `0cdfefff` || RAM, rw/rw, Domain 0 ||
+|| ... || ||
+|| `0ce17000` <br> `0ce17fff` || RAM, rw/rw, Domain 0, 1k ||
+|| ... || ||
+|| `0ce30000` <br> `0ce30fff` || RAM, rw/rw, Domain 0, 1k ||
+|| ... || ||
+|| `0f000000` <br> `2fffffff` || hardware registers, maps to self, rw/rw, Domain 0 ||
+|| ... || ||
 || `30000000` || Flash Memory Bank 1 at `02000000`, rw/ro, Domain 0 ||
 || `30400000` <br> `30700000` || Flash Memory Bank 1 at `10000000`, rw/ro, Domain 0 ||
 || ... || ||
 || `34000000` || Flash Memory Bank 1 at `02000000`, rw/rw, Domain 0 ||
 || `34400000` <br> `34700000` || Flash Memory Bank 1 at `10000000`, rw/rw, Domain 0 ||
+|| ... || ||
+|| `9c000000` <br> `9fffffff` || maps to PCMCIA Control 0 at `3c000000`, rw/rw, Domain 1 ||
+|| ... || ||
+|| `ac000000` <br> `afffffff` || maps to PCMCIA Control 1 at `4c000000`, rw/rw, Domain 1 ||
+
+End of MMU table. A physical device would have additional mappings for the virtual Screen Memory at `e0000000` and maybe others. If a ROM patch was applied, many entries in this table would be quite different.
