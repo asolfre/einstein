@@ -8,9 +8,3 @@ Physical Map:
 || `04000000` || 1st level MMU table (16kB) ||
 || `04004000` || Start of Super Stack in Physical Memory ||
 || `043c0000`<br>`043fffff` || Physical Video RAM: 320x480/2=76800 bytes ||
-
-Virtual Map:
-|| `01b00000` || Jump Table (more details needed) ||
-|| `0C100000` || System Variables (more details needed) ||
-|| `60000000` || NewtonScript expanded (running) apps (unlikely! please verify!) ||
-|| `E0000000` || Video RAM: 320x480/2=76800 bytes (please verify) ||
