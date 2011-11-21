@@ -1,6 +1,6 @@
 #summary Physical RAM Map
 
-see also: [[MemoryMap Newton OS 2.1 Physical Memory Map]]
+see also: see also: [MemoryMap Memory Map]
 
 The RAM will be mapped to various places in virtual memory using the MMU lookup table.
 
