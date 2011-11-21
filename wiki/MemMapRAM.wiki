@@ -1,41 +1,14 @@
 #summary Physical RAM Map
 
-The top part of the RAM will be mapped to various places in virtual memory using the MMU lookup table.
+The RAM will be mapped to various places in virtual memory using the MMU lookup table.
 
-Physical Map
-|| `00000000` || Main ROM ||
-|| `00800000` <br> `01000000` || ROM Extension ||
+Physical Map:
 || `04000000` || 1st level MMU table (16kB) ||
-|| `04004000` || RAM ||
+|| `04004000` || End of 1st Level MMU Table ||
 || `043c0000`<br>`043fffff` || Physical Video RAM: 320x480/2=76800 bytes ||
-|| `0f001000` || First I/O address ||
-|| `0f086c00` || Start of DMA Controller ||
-|| `0f110000` || Power Supply Control ||
-|| `0f181000` || Real Time Clock ||
-|| `0f181400` || Alarm Time ||
-|| `0f181800` || GPIO Timer ||
-|| `0f182000` || GPIO Timer 0 ||
-|| `0f182400` || GPIO Timer 1 ||
-|| `0f182800` || GPIO Timer 2 ||
-|| `0f182c00` || GPIO Timer 3 ||
-|| `0f183000` || GPIO IR - pending interrupts ||
-|| `0f183800` || GPIO IACK - acknowledge interrupt ||
-|| `0f18dc00` || GPIO pullups ||
-|| `0f18e000` || GPIO polarity ||
-|| `0f18e800` || GPIO direction ||
-|| `0f18e800` || GPIO data ||
-|| `0f1c0000` || external serial port base ||
-|| `0f1c4400` || Geo Port Status ||
-|| `0f1c6000` || Geo Port Write Byte ||
-|| `0f1c6700` || Geo Port Read Byte ||
-|| `0f1d0000` || infrared serial port base ||
-|| `0f1e0000` || digitizer serial port base ||
-|| `0f1e0000` || modem serial port base ||
 
-Virtual Map (no details yet, must verify the addresses and ranges!). Still missing is the Serial Number ROM (may be i2c?), DMA, Interrupt registers, ByteCode memory etc. .
-|| `01b00000` || Jump Table ||
-|| `04000000` || 1st level MMU table (16kB) ||
-|| `0C100000` || System Variables ||
-|| `0f180000` || GPIO, General Purpose I/O ||
-|| `60000000` || NewtonScript expanded (running) apps ||
-|| `E0000000` || Video RAM: 320x480/2=76800 bytes ||
+Virtual Map:
+|| `01b00000` || Jump Table (more details needed) ||
+|| `0C100000` || System Variables (more details needed) ||
+|| `60000000` || NewtonScript expanded (running) apps (unlikely! please verify!) ||
+|| `E0000000` || Video RAM: 320x480/2=76800 bytes (please verify) ||
