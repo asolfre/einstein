@@ -10,7 +10,7 @@ see also: [MemMapVirtual Virtual Memory Map]
 ||...||
 || `04000000`<br>4MB<br>`043fffff` || [MemMapRAM RAM (physical)] ||
 ||...||
-|| `0f000000`<br>?MB<br>`0f2fffff` || [MemMapIO Hardware I/O Registers] ||
+|| `0f000000`<br>?MB<br>`0fffffff` || [MemMapIO Hardware I/O Registers] ||
 ||...||
 || `10000000`<br>4MB<br>`103fffff` || [MemMapFlash 2nd Flash Memory Bank] ||
 ||...||
