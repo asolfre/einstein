@@ -52,10 +52,10 @@ see also: [MemoryMap Newton OS 2.1 Physical Memory Map]
 || `0f000000` <br> `2fffffff` || hardware registers, maps to self, rw/rw, Domain 0 ||
 || ... || ||
 || `30000000` || Flash Memory Bank 1 at `02000000`, rw/ro, Domain 0 ||
-|| `30400000` <br> `30700000` || Flash Memory Bank 1 at `10000000`, rw/ro, Domain 0 ||
+|| `30400000` <br> `30700000` || Flash Memory Bank 2 at `10000000`, rw/ro, Domain 0 ||
 || ... || ||
 || `34000000` || Flash Memory Bank 1 at `02000000`, rw/rw, Domain 0 ||
-|| `34400000` <br> `34700000` || Flash Memory Bank 1 at `10000000`, rw/rw, Domain 0 ||
+|| `34400000` <br> `34700000` || Flash Memory Bank 2 at `10000000`, rw/rw, Domain 0 ||
 || ... || ||
 || `9c000000` <br> `9fffffff` || maps to PCMCIA Control 0 at `3c000000`, rw/rw, Domain 1 ||
 || ... || ||
