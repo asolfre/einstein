@@ -15,4 +15,4 @@ see also: [MemMapVirtual Virtual Memory Map]
 || `10000000`<br>4MB<br>`103fffff` || [MemMapFlash 2nd Flash Memory Bank] ||
 ||...||
 || `30000000` || [MemPCMCIA PCMCIA Card 0 Base] ||
-|| `40000000` || [MemPCMCIA PCMCIA Card 0 Base] ||
+|| `40000000` || [MemPCMCIA PCMCIA Card 1 Base] ||
