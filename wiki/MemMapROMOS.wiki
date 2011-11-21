@@ -4,6 +4,8 @@ see also: [MemMapROM Newton ROM]
 
 || `00000000` || ARM Interrupt vectors ||
 || `00000020` || Data ||
+|| `00000400` || MMU Table for the first 256k of ROM ||
+|| `00000800` || end of MMU Table ||
 || `00002000` || ARM Jump Tables ||
 || `00021438` || ARM assembler code routines ||
 || `003AF000` || NewtonScript Magic Pointer table ||
