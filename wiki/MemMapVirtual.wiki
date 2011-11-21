@@ -13,6 +13,22 @@ see also: [MemoryMap Newton OS 2.1 Physical Memory Map]
 || ... || ||
 || `01e00000` <br>  `01efffff`|| REx Jump Table at `007ee000`, Domain 0, may get patched, sparse use ||
 || ... || ||
+|| `03500000` <br> `03cfffff` || Mirror of ROM at `00000000`, rw/ro, Domain 0 ||
+|| ... || ||
+|| `04000000` <br> `040fffff` || Mirror of ROM start at `00000000`, rw/ro, Domain 0 ||
+|| ... || ||
+|| `05000000` <br> `051fffff` || Mirror of first half of Flash Bank 1 at `02000000`, rw/rw, Domain 0 ||
+|| ... || ||
+|| `0c000000` <br> `0c000fff` || RAM, 1k rw/na blocks, Domain 0 ||
+|| ... || ||
+|| `0c002000` <br> `0c008fff` || RAM, 1k rw/na blocks, Domain 0 ||
+|| ... || ||
+|| `0c100000` <br> `0c125fff` || RAM, rw/rw, Domain 2 ||
+|| ... || ||
+|| `0c200000` <br> `0c205fff` || RAM, rw/rw, Domain 3 ||
+|| ... || ||
+|| `0c310000` <br> `0c328fff` || RAM, rw/rw, Domain 3, only 1k or 2k blocks ||
+|| ... || ||
 || `30000000` || Flash Memory Bank 1 at `02000000`, rw/ro, Domain 0 ||
 || `30400000` <br> `30700000` || Flash Memory Bank 1 at `10000000`, rw/ro, Domain 0 ||
 || ... || ||
