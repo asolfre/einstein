@@ -20,6 +20,7 @@ see also: [MemoryMap Newton OS 2.1 Physical Memory Map]
 || `05000000` <br> `051fffff` || Mirror of first half of Flash Bank 1 at `02000000`, rw/rw, Domain 0 ||
 || ... || ||
 || `0c000000` <br> `0c000fff` || RAM, 1k rw/na blocks, Domain 0 ||
+|| || `0c000400`: Kernel Stack ||
 || ... || ||
 || `0c002000` <br> `0c008fff` || RAM, 1k rw/na blocks, Domain 0 ||
 || || `0c002c00`: IRQ Stack ||
