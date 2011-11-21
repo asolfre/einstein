@@ -6,7 +6,7 @@ The RAM will be mapped to various places in virtual memory using the MMU lookup 
 
 Physical Map:
 || `04000000` || 1st level MMU table (16kB) ||
-|| `04004000` || end of 1st level MMU table ||
+|| `04004000` || Start of Super Stack in Physical Memory ||
 || `043c0000`<br>`043fffff` || Physical Video RAM: 320x480/2=76800 bytes ||
 
 Virtual Map:
