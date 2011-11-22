@@ -25,11 +25,14 @@ see also: [MemoryMap Newton OS 2.1 Physical Memory Map]
 || `0c002000` <br> `0c008fff` || RAM, 1k rw/na blocks, Domain 0 ||
 || || `0c002c00`: IRQ Stack ||
 || || `0c003400`: FIQ Stack ||
+|| || `0c004000`: svc Stack ||
 || || `0c004c00`: Abort Stack ||
 || || `0c006000`: Undef Stack ||
 || || `0c007400`: User Stack ||
 || ... || ||
 || `0c100000` <br> `0c125fff` || RAM, rw/rw, Domain 2 ||
+|| || `0c100000`: Kernel Domain Heap Base ||
+|| || `0c100800`: gKernelArea, Kernel Globals Base (end = 0c107e14), many symbols available here! ||
 || ... || ||
 || `0c200000` <br> `0c205fff` || RAM, rw/rw, Domain 3 ||
 || ... || ||
