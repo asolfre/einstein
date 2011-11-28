@@ -24,4 +24,5 @@ Remarks:
 || Fedora Core 7 || Celeron M 360 (1.4GHz) || 480 MB || einstein || 3119 || Victor Rehorst || 20070710 version, Generic JIT ||
 || Samsung Galaxy Tab || ?? || ?? || Android Einstein || 1300 || Matthias Melcher || Mar 13th 2011 SVN ||
 || iPhone 3GS || A4 (ARM6) 1GHz || 256 MB || iEinstein || 1200 || Matthias Melcher || Sep 15th 2010 SVN ||
+|| Samsung Galaxy Note || A4 (ARM6) 1.2GHz || ? MB || Android Einstein || 1200 || Matthias Melcher || Nov 28th 2011 SVN ||
 || Pepper Linux (Fedora Core 4) || AMD Geode LX 500MHz || 1GB || einstein --width=600 --height=400 || 756 || Victor Rehorst || 20070710 version, Generic JIT ||
