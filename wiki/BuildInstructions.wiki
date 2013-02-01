@@ -8,12 +8,14 @@ For now, the Einstein ROM Extension (REX) can only be built using Apple Newton C
 
 For your convenience, a binary of the Einstein REX is available under the {{{_Data_/}}} directory.
 
-== Building on MacOS X, for MacOS X, using Xcode 3 ==
+== Building on MacOS X, for MacOS X, using Xcode 3 or 4 ==
 
   # Get the latest Xcode from Apple and install it.
-  # Open Einstein.xcodeproj, located in {{{_Build_/Xcode3}}}
+  # Open Einstein.xcodeproj, located in {{{_Build_/Xcode3}}} (or Xcode4)
   # Choose "Einstein" as your Active Target.
   # Build!
+
+NOTE: Einstein is currently not 64-bit clean.  Build the 32-bit configuration instead.
 
 == Building on MacOS X, for iOS 3.2 and up, using Xcode 3 ==
 
