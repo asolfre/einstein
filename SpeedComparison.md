@@ -1,0 +1,29 @@
+# Introduction #
+
+This is a page to collect speed test results.  Please post in this format:
+
+| OS Platform | CPU Type / Speed | System RAM | Einstein command line | Loop iter. (avg /10) | Your Name | Notes and Einstein version (date) |
+|:------------|:-----------------|:-----------|:----------------------|:---------------------|:----------|:----------------------------------|
+
+Remarks:
+  * The ticks test always gives 65 on Einstein and 60 on regular Newtons (and more on accelerated Newtons). This is because the timer emulation is different on Einstein, as emulating the exact tick beats is expensive.
+  * The loop iteration test is a test of the NewtonScript speed, which is not extremely accurate because the AppWorld (where the NewtonScript interpreters runs) is only one of the threads running on NewtonOS. It is not an accurate measure of the CPU speed, but it's a good way to measure the progress on the Einstein emulator.
+
+
+# Results #
+
+| **OS Platform** | **CPU Type / Speed** | **System RAM** | **Einstein command line** | **Loop iter. (avg /10)** | **Your Name** | **Notes** |
+|:----------------|:---------------------|:---------------|:--------------------------|:-------------------------|:--------------|:----------|
+| OS X Snow Leopard | 2.66GHz Core i7  | 8GB | einstein | 13550 | Matthias Melcher | 2010.1, Generic JIT |
+| OS X Snow Leopard | 2.33GHz Core 2 Duo  | 3GB | einstein | 9210 | Matthias Melcher | 2010.1, Generic JIT |
+| Mac OS X 10.4.10 | Core 2 Duo 2.4 GHz | 4 GB | Einstein.app | 7466 | Steven Frank |
+| MacOS X 10.4.10 (Intel) | iMac 1.83 GHz Intel Core Duo | 512 MB | Einstein.app | 6698 | Paul Guyot | 2007.7 release, Generic JIT |
+| macbook | 2Gz Intel Core Duo | 2GB | ./einstein -m 737041 -l log . | 6108 | Andy Diller |
+| Fedora Core 5 | Pentium 4 HT 3.0GHz | 1.25GB | einstein | 5221 | Victor Rehorst | 20070710 version, Generic JIT |
+| WindowsXP | Pentium 4 HT (3.0GHz)  | 1GB | einstein | 5188 | Matthias Melcher | 2007.7.4, Generic JIT |
+| Mac OS X 10.5.8 | Intel Core 2 Duo 3.33 GHz | 2GB | Einstein.app | 3989 | Vladislav Korotnev |
+| Fedora Core 7 | Celeron M 360 (1.4GHz) | 480 MB | einstein | 3119 | Victor Rehorst | 20070710 version, Generic JIT |
+| Samsung Galaxy Note | ?? | ?? | Android Einstein | 1500 | Matthias Melcher | Dec 8th 2011 SVN |
+| Samsung Galaxy Tab | ?? | ?? | Android Einstein | 1300 | Matthias Melcher | Mar 13th 2011 SVN |
+| iPhone 3GS | A4 (ARM6) 1GHz | 256 MB | iEinstein | 1200 | Matthias Melcher | Sep 15th 2010 SVN |
+| Pepper Linux (Fedora Core 4) | AMD Geode LX 500MHz | 1GB | einstein --width=600 --height=400 | 756 | Victor Rehorst | 20070710 version, Generic JIT |

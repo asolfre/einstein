@@ -1,0 +1,10 @@
+_see also:_ Windows200774ReleaseNotes Windows200776ReleaseNotes
+
+# New Features #
+
+  * added performance tools (SVN only)
+  * added first careful steps of "Albert OS", a rewrite of emulated functions with native "C" and "C++" (see SVN for details)
+
+# Bug Fixes #
+
+  * adjusted real time clock

@@ -1,0 +1,78 @@
+## General remarks ##
+
+Einstein relies on a framework called "K" which is included in the SVN repository. It is built using Xcode or [Perforce Jam](http://www.perforce.com/jam/jam.html).
+
+For now, the Einstein ROM Extension (REX) can only be built using Apple Newton C++ Tools and Apple Newton Toolkit, available on [UNNA](http://www.unna.org/) as part of the [NewtonDev environment](http://www.unna.org/view.php?/development/NewtonDev) and running in Mac OS 9 or Classic on Mac OS X.
+
+For your convenience, a binary of the Einstein REX is available under the `_Data_/` directory.
+
+Please see KnownIssues for some issues you may encounter while running Einstein.
+
+## Building on MacOS X, for MacOS X, using Xcode 3 or 4 ##
+
+  1. Get the latest Xcode from Apple and install it.
+  1. Open Einstein.xcodeproj, located in `_Build_/Xcode3` (or Xcode4)
+  1. Choose "Einstein" as your Active Target.
+  1. Build!
+
+NOTE: Einstein is currently not 64-bit clean.  Build the 32-bit configuration instead.
+
+## Building on MacOS X, for iOS 3.2 and up, using Xcode 3 ##
+
+  1. Get the latest Xcode with iOS SDK from Apple and install it.
+  1. Open Einstein.xcodeproj, located in `_Build_/Xcode3`
+  1. Choose "iOSEinstein" as your Active Target.
+  1. From the same menu, choose whether you are building for Simulator or Device (actual hardware).
+  1. From the same menu, choose either iPad or iPhone as a target. (for example: iPhone Simulator 4.2)
+    * due to a bug in Xcode, the iPad emulator version will not launch correctly - the iPhone simulator however will
+    * due to another bug, once you built an iOS version, you can not switch back to build a native OS X version. If you want to switch back to native development, you must hold down the Alt key when clicking on the 'Overview' pulldown menu
+  1. Build!
+
+## About the ROM ##
+
+Einstein requires an 8 MB Newton ROM dump image (8,388,608 bytes exactly) to run.  Please see DumpingTheRom for more information about extracting the ROM image from your owned Newton device.
+
+Development efforts are currently concentrated on the 717006 ROM, which corresponds to Apple's last official release of Newton OS -- version 2.1.
+
+For iOS builds, it must be named `717006.rom` and in the application's Documents folder at runtime.
+
+For the iOS simulator, the path to this file will be something like: /(Home)/Library/Application Support/iPhone Simulator/(SDK Version)/Applications/(Einstein UUID)/Documents/717006.rom
+
+For running on an iOS device, use iTunes to copy the ROM file to the device as described on the [iOS](iOS.md) page.
+
+For running on Mac OS X, the ROM file can be selected at runtime.
+
+An MD5 checksum of a known working ROM dump is 70dc5f5f3102e44f15dc93f356b98add.
+
+## Building on Unix (including MacOS X) and Cygwin, as a native build, using Jam ##
+
+  1. Install Jam 2.5. Not btjam, not ftjam, regular jam. You can get it from MacPorts on MacOS X. On Ubuntu, the debian package jam is fine. You can also compile it from source: [ftp://ftp.perforce.com/pub/jam/jam-2.5.zip](ftp://ftp.perforce.com/pub/jam/jam-2.5.zip)
+  1. Make sure you have `libstdc++-devel` installed as well.
+  1. K is part of the repository. You may have to update Makefiles. Unfortunately it vanished from SourceForge
+  1. Compile K with Jam with `cd <path_to_K>/_Build_/Jam/ && jam`
+  1. Get libffi. On MacOS X, I suggest getting with MacPorts.  There seem to be pre-built copies for various platforms in the Einstein project in svn too.
+  1. Compile Einstein with Jam with `cd <path_to_einstein>/_Build_/Jam/ && jam -sK=<path_to_K>` or `cd <path_to_einstein>/_Build_/Jam/ && jam -sK=<path_to_K> -sC++FLAGS=-I/path/to/libffi/include -sCCFLAGS=-I/path/to/libffi/include -sLINKFLAGS=-I/path/to/libffi/include` if libffi isn't installed in a standard path that the compiler will find.  For example:
+
+`jam -sjittarget=generic -sC++FLAGS="-I/usr/local/include -I/root/einstein/Einstein/libffi-linux/include/ -L/root/einstein/Einstein/libffi-linux/lib" -sCCFLAGS="-I/usr/local/include -I/root/einstein/Einstein/libffi-linux/include/ -L/root/einstein/Einstein/libffi-linux/lib"  -sK=/root/K/`
+
+### Notes ###
+
+If you got libffi with MacPorts as suggested, you don't need to specify its path on the command line. You will very probably need to edit the Jamfile to cope with your target.
+
+## On Unix (including MacOS X), as cross build, using Jam ##
+
+The general method is the following:
+
+  1. Install Jam 2.5. Not btjam, not ftjam, regular jam. You can get it from MacPorts on MacOS X. On Ubuntu, the debian package jam is fine. You can also compile it from source: [ftp://ftp.perforce.com/pub/jam/jam-2.5.zip](ftp://ftp.perforce.com/pub/jam/jam-2.5.zip)
+  1. Get K (preferably from CVS) at http://sourceforge.net/projects/KLibs/
+  1. Edit K's Jamfile so it will work with your setup.
+  1. Compile K with Jam with `cd <path_to_K>/_Build_/Jam/ && jam -starget=<cross_target>`
+  1. Edit Einstein's Jamfile so it will work with your setup.
+  1. Compile Einstein with Jam with `cd <path_to_einstein>/_Build_/Jam/ && jam -sK=<path_to_K> -starget=<cross_target>`
+
+## How I built cross-binaries ##
+
+  * OpenZaurus 3.4.5: with crosstool compilers, cf OpenZaurusBuildInstructions.
+  * Nokia 770 OS 2005: with crosstool compilers (built with gcc3 on the Mac).
+  * Debian x86: with crosstool compilers.
+  * Nokia 770/800 OS 2006: with Code Sourcery compilers ported with MacPorts, cf NokiaBuildInstructions.

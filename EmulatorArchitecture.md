@@ -1,0 +1,67 @@
+(...work in progress...)
+
+## Primer ##
+
+Here is an collection of information explaining why the Newton OS is such a great operating system, and why emulation and simulation could be solved so elegantly in Einstein: NewtonArchitecture
+
+## ROM Image ##
+
+In order to run, Einstein requires a ROM dump from a real Newton.  We cannot provide you this ROM file, but you can generate one from your own hardware if you own a Newton.  The ROM file is expected to be exactly 8 megabytes in size.  Most development is being done with the version 717006 ROM.
+
+## Einstein.rex ##
+
+Einstein.rex is a Newton ROM extension, built with the Newton developer tools in much the same way as you would build a ROM patch for an actual Newton.  It provides glue code to re-route hardware dependencies to the virtual emulator hardware.  Einstein loads the REx file from disk and applies it to the vanilla ROM when the emulator first starts up.
+
+## Flash File ##
+
+The flash file simulates the on-board flash memory of an actual Newton.  It is created and initialized the first time the emulator is run.  The file is eight megabytes in size, consisting of two "banks" of four megabytes each.  The TFlash class provides the interface to the flash memory.  The TFlash object is "owned" by TMemory, which is in turn owned by TEmulator.
+
+On Mac OS X, the flash file is created in ~/Library/Application Support/Einstein Platform
+
+## First Startup ##
+
+Einstein creates a file (usually named 717006.img, assuming you're using the 717006 ROM) the first time it runs.  This 16 MB file mirrors the SImage structure defined in the code.  The first 8 MB are a copy of the ROM dump.  The next 8 MB contain a copy of the REX file (padded out to 8 MB with zeros).  The ROM and REX images are byte-swapped on little-endian host OSes as they are written to the file.  At the end of the file is some metadata used by Einstein.
+
+Patches are then applied to this "cooked" ROM image, so that the original ROM image remains unmodified.
+
+## TEmulator ##
+
+TEmulator is the primary class that runs the emulation.  TEmulator encapsulates all of the other hardware abstractions in Einstein, including display hardware, sound hardware, CPU, memory, serial ports, etc.  Once properly created and initialized, TEmulator's Run() method is dispatched on its own thread and drives the main loop of the emulator.
+
+In addition to TEmulator's thread, TInterruptManager::Run() executes in its own thread, as does TNetworkManager::Run().
+
+## TPlatformManager ##
+
+## TNetworkManager ##
+
+## TSoundManager ##
+
+The sound manager provides an interface to the host OS's sound hardware.  It receives raw sound buffers from the emulator and routes them to the host OS for playback, as well as accepting sound input.
+
+TNullSoundManager is a direct subclass that provides no sound input/output capabilities.
+
+On Mac OS X and iOS, TSoundManager is subclassed by TBufferedSoundManager which is in turn subclassed by TCoreAudioSoundManager.
+
+For other platforms, the open source portaudio library is used via the TPortAudioSoundManager subclass of TBufferedSoundManager.
+
+## TScreenManager ##
+
+TScreenManager is an abstract base class that handles display screen output and pen/keyboard input in a host-agnostic way.
+
+For iOS, it is subclassed by TIOSScreenManager.  For Mac OS X, TCocoaScreenManager.
+
+TScreenManager supplies basic bitmap blitting functions designed to work in any of the emulated Newton's screen orientations.  It is up to the subclass to display the emulated Newton's bitmap.
+
+Subclasses of TScreenManager also convey pen and key inputs from the host OS back to the emulator.
+
+TScreenManager receives calls from the emulator when the emulated Newton has a power button, backlight toggle, screen reorientation, or contrast change event.
+
+## TEmulator ##
+
+The emulator thread spends most of its life in the Run() method of the JIT (currently TJITGeneric).
+
+## JIT ##
+
+The emulator performs just-in-time (JIT) translation of the Newton's ARM CPU instruction set to host-native instructions.  JIT is performed in units of pages (1K) as the emulator follows the Newton CPU's program counter (PC).  A cache of translated pages is kept in memory to boost performance.
+
+The JIT has two steps: first, ARM instructions are converted into an internal bytecode for performance reasons.  While emulation is running, the bytecode is interpreted and dispatched to host-native code.  For example, the ARM instruction "mov [r0](https://code.google.com/p/einstein/source/detail?r=0), [r1](https://code.google.com/p/einstein/source/detail?r=1)" is ultimately dispatched to a native function called JIT\_mov\_r0\_r1()

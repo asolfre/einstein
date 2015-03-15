@@ -1,0 +1,29 @@
+see also: [Memory Map](MemoryMap.md)
+
+This is not very detailed and not very much sorted at all. Please update.
+
+Physical Map:
+| `0f001000` | First I/O address |
+|:-----------|:------------------|
+| `0f086c00` | Start of DMA Controller |
+| `0f110000` | Power Supply Control |
+| `0f181000` | Real Time Clock |
+| `0f181400` | Alarm Time |
+| `0f181800` | GPIO Timer |
+| `0f182000` | GPIO Timer 0 |
+| `0f182400` | GPIO Timer 1 |
+| `0f182800` | GPIO Timer 2 |
+| `0f182c00` | GPIO Timer 3 |
+| `0f183000` | GPIO IR - pending interrupts |
+| `0f183800` | GPIO IACK - acknowledge interrupt |
+| `0f18dc00` | GPIO pullups |
+| `0f18e000` | GPIO polarity |
+| `0f18e800` | GPIO direction |
+| `0f18e800` | GPIO data |
+| `0f1c0000` | external serial port base |
+| `0f1c4400` | Geo Port Status |
+| `0f1c6000` | Geo Port Write Byte |
+| `0f1c6700` | Geo Port Read Byte |
+| `0f1d0000` | infrared serial port base |
+| `0f1e0000` | digitizer serial port base |
+| `0f1e0000` | modem serial port base |

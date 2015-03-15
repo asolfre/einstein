@@ -1,0 +1,15 @@
+_see also:_ Windows200774ReleaseNotes
+
+# New Features #
+
+  * boot message hinting at using right mouse button to pop up Einstein menu
+  * smarter ROM image reading
+
+# Bug Fixes #
+
+  * fixed text selection issues - text can now be selected by holding down the pen
+  * fixed some of the fullscreen features
+
+# Pleas Note #
+
+  * there is still an issue that Win Einstein may hang after you entered all user information. If the notepad does not show within five seconds or so, quit Einstein using Ctrl-Alt-Delete, delete the Flash file (as set up in the Einstein settings) and try again. Once you reach the notepad, Einstein will not hang again.

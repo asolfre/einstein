@@ -1,0 +1,45 @@
+This is a source-code only release! You will have to compile and sign the app yourself. Einstein was rejected by the App Store for two reasons: it executes code that is uploaded (the ROM), and it resembles and Apple product (which would be quite hard to avoid for an emulator). But don't fret. If you have a developer license, use it. Einstein should also run on jailbroken devices. Also, an Android version is currently being developed.
+
+# Introduction #
+
+Einstein Emulator requires an MP2x00 US ROM image.
+The ROM file must be named 717006.rom and copied to
+your device using the iTunes File Sharing feature.
+
+# Installing the ROM #
+
+See DumpingTheRom to learn how to extract a ROM image from your owned Newton device.
+
+Rename the ROM to _717006.rom_ and upload it to your iOS device using _iTunes_.
+
+  * launch iTunes
+  * connect your iPhone or iPad device
+  * click on your device in the _Devices_ list
+  * select the _Apps_ tab
+  * under _File Sharing_, click on the _iEinstein_ icon
+  * drag the ROM file into the _iEinstein Documents_ list
+  * synchronize your device and relaunch iEinstein
+
+iEinstein also accepts the Lantern DDK image files. They must be named "717006.aif" and "717006.rex".
+
+# The First Launch #
+
+When you launch iEinstein with ROM installed for the first time, it will need to set up the entire Newton system. It will take up to a minute until the Newton logo shows and another minute until you are finally asked to input some personal information.
+
+Don't bother setting the date: NewtonOS has a bug and can not support dates after January 2010. There is a patch available which may or may not work with the emulator.
+
+Eventually, the Notes application will show with an icon bar at the bottom of the screen. Go ahead, fool around, Write text, open the drawer, test the other apps. Have fun!
+
+# Installing Packages #
+
+You can download hundreds of packages from http://www.unna.org/
+
+  * connect your iPhone to your computer and run iTunes
+  * launch iEinstein on your device and let it boot up all the way
+  * open File Sharing in iTunes and drag the packages into the file list
+    * the iPhone will briefly show "Sync in Progress"
+    * when back in iEinstein, Newton OS will install the package
+
+The package in the file sharing list is no longer needed, you can delete it now or keep it around. To reinstall a package, drop it into the file list again.
+
+Use the Newton OS  Drawer to uninstall packages from the Newton by tapping and holding, then choosing _delete_ from the file menu.
